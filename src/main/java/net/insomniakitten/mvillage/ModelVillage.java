@@ -16,46 +16,41 @@ package net.insomniakitten.mvillage;
  *   limitations under the License.
  */
 
+import net.insomniakitten.mvillage.common.util.GuiManager;
 import net.minecraft.creativetab.CreativeTabs;
-import net.minecraft.init.Items;
 import net.minecraft.item.ItemStack;
 import net.minecraftforge.fml.common.Mod;
-import net.minecraftforge.fml.common.event.FMLInitializationEvent;
 import net.minecraftforge.fml.common.event.FMLPostInitializationEvent;
-import net.minecraftforge.fml.common.event.FMLPreInitializationEvent;
 
-import javax.annotation.Nonnull;
+@Mod(modid = ModelVillage.MOD_ID,
+     name = ModelVillage.MOD_NAME,
+     version = ModelVillage.MOD_VERSION,
+     dependencies = ModelVillage.DEPENDENCIES,
+     acceptedMinecraftVersions = ModelVillage.MC_VERSION)
 
-@Mod(
-        modid = ModelVillage.MOD_ID,
-        name = ModelVillage.MOD_NAME,
-        version = ModelVillage.MOD_VERSION,
-        acceptedMinecraftVersions = ModelVillage.MC_VERSION
-)
 public class ModelVillage {
-
-    public static final String MOD_ID = "mvillage";
-    public static final String MOD_NAME = "Model Village";
-    public static final String MOD_VERSION = "%mod_version";
-    public static final String MC_VERSION = "%mc_version%";
-    public static final TabMV CTAB = new TabMV();
 
     @Mod.Instance
     public static ModelVillage instance;
 
-    @Mod.EventHandler
-    public void onPreInit(FMLPreInitializationEvent event) {}
+    public static final String MOD_ID = "mvillage";
+    public static final String MOD_NAME = "Model Village";
+    public static final String MOD_VERSION = "%MODVERSION%";
+    public static final String DEPENDENCIES = "required-after:ctm@[%CTMVERSION%,);";
+    public static final String MC_VERSION = "[1.12,1.13)";
+
+    public static final CreativeTabs CTAB = new CreativeTabs(ModelVillage.MOD_ID) {
+
+        @Override
+        public ItemStack getTabIconItem() {
+            return ItemStack.EMPTY;
+        }
+
+    };
 
     @Mod.EventHandler
-    public void onInit(FMLInitializationEvent event) {}
-
-    @Mod.EventHandler
-    public void onPostInit(FMLPostInitializationEvent event) {}
-
-    static class TabMV extends CreativeTabs {
-        TabMV() { super(CreativeTabs.getNextID(), ModelVillage.MOD_ID); }
-        @Override @Nonnull
-        public ItemStack getTabIconItem() { return new ItemStack(Items.CAKE); }
+    public void onPostInit(FMLPostInitializationEvent event) {
+        GuiManager.register();
     }
 
 }

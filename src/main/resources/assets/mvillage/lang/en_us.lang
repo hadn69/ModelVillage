@@ -1,0 +1,46 @@
+itemGroup.mvillage=Model Village
+
+tile.mvillage.cabinet.name=Kitchen Cabinet
+tile.mvillage.cabinet.doors.name=Kitchen Cabinet
+tile.mvillage.cabinet.doors.tooltip=Doors
+
+tile.mvillage.cabinet.drawers.name=Kitchen Cabinet
+tile.mvillage.cabinet.drawers.tooltip=Drawers
+
+tile.mvillage.cabinet.crafting.name=Kitchen Cabinet
+tile.mvillage.cabinet.crafting.tooltip=Crafting
+
+tile.mvillage.cabinet.sink.name=Kitchen Cabinet
+tile.mvillage.cabinet.sink.tooltip=Sink
+
+tile.mvillage.oven.name=Oven
+tile.mvillage.connection_test.name=Connection Test
+
+tile.mvillage.chair.wooden.name=Chair
+tile.mvillage.chair.wooden.tooltip=Wooden
+
+tile.mvillage.chair.modern.name=Chair
+tile.mvillage.chair.modern.tooltip=Modern
+
+tile.mvillage.chair.antique.name=Chair
+tile.mvillage.chair.antique.tooltip=Antique
+
+tile.mvillage.chair.fantasy.name=Chair
+tile.mvillage.chair.fantasy.tooltip=Fantasy
+
+tile.mvillage.table.wooden.name=Table
+tile.mvillage.table.wooden.tooltip=Wooden
+
+tile.mvillage.table.modern.name=Table
+tile.mvillage.table.modern.tooltip=Modern
+
+tile.mvillage.table.antique.name=Table
+tile.mvillage.table.antique.tooltip=Antique
+
+tile.mvillage.table.fantasy.name=Table
+tile.mvillage.table.fantasy.tooltip=Fantasy
+
+tile.mvillage.ceilingFan.name=Ceiling Fan
+
+tile.mvillage.doorBell.name=Door Bell
+subtitle.mvillage.doorBell=Door bell ringing
